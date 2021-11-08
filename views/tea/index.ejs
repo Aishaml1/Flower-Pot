@@ -1,18 +1,30 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/tea.css">
-<%- include('../partials/nav') %>
+    <link rel="stylesheet" href="/stylesheets/tea.css">
+    <%- include('../partials/nav') %>
 
-<section>
+        <section>
 
-<h1>Tea</h1>
-<section>
-<ul>
-<li> Chamomile <img id='teaImg' src='/images/tea/Chamomile.JPG'> 
-   
-</li>
-<li> White <img id='teaImg' src='/images/tea/White .JPG'> 
-</li>
-</ul>
-</section>
+            <h2>Add Tea!</h2>
 
-<%- include('../partials/footer') %>
+            <ul>
+
+            <li> Chamomile <img src='/images/tea/Chamomile.JPG' height="150px" width="150px">
+            </li>
+
+            </ul>
+            <form action="/profile" method="PUT">
+            <% if (user) { %>
+            <button name="Chamomile" >Add</button> 
+            </form>
+            <% } %>
+
+
+                <form action="/profile" method=GET>
+                    <ul>
+                        <button>Add</button>
+                        <li> White <img id='teaImg' src='/images/tea/White .JPG'>
+                        </li>
+                    </ul>
+                </form>
+
+                <%- include('../partials/footer') %>
