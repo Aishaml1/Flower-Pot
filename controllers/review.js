@@ -25,18 +25,13 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    Reviews.findById(req.params._id)
-        .populate("owner")
-        .then(review => {
-            res.render('reviews/show', {
-                review, review
-            })
-        })
-        .catch(err => {
-            console.log(err)
-            res.redirect('/reviews')
-        })
-}
+    Reviews.findById(req.params.id, function(error, review) {
+      res.render('reviews/show', {
+        review: review,
+        error: error
+      })
+    })
+  }
 
 function newReview(req,res){
     res.render('reviews/new',{})
