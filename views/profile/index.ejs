@@ -1,0 +1,35 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= user ? user.profile.name : error %></h1>
+  <% if (user?.profile.avatar) { %>
+    <div>
+      <img 
+        src="<%= user.profile.avatar %>" 
+        alt="<%= user.profile.name %> avatar"
+      >
+    </div>
+  <% } %>
+  
+  <main>
+    <h1>Tea List</h1>
+    <table id="list">
+      <thead>
+        <tr>
+          <th>Tea Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% tea.forEach((t) => { %>
+        <tr>
+          <td><%= t.TeaName %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </main>
+
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,42 @@
+<%- include('../partials/html-head') %>
+  <%- include('../partials/nav') %>
+    <sections>
+      <% if (user) { %>
+      <h1>Add a Review </h1>
+      <div>
+          <form action="/reviews/<%= review._id%>allReviews method=POST">
+            <div class="selectTea">
+              <label for="selectTea">What tea Have You Tried?</label>
+              <select id="tea" name="selectTea">
+                <option value="Chamomile">Chamomile</option>
+                <option value="White">White</option>
+                <option value="Peppermint">Peppermint</option>
+                <option value="Green Tea">Green Tea</option>
+                <option value="None">None</option>
+              </select>
+            </div>
+
+            <div class="preference">
+              <label for="like">Do you like it?</label>
+              <select id="tea" name="like">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="N/A">N/A</option>
+              </select>
+            </div>
+            <div class="other">
+
+              <label for='other'>Tea reviews or Reccomendations:
+                <input name='other'>
+              </label>
+            </div>
+            <button type="submit"> Add</button>
+          </form>
+         <h3><a href="/reviews/<%= review._id%>allReviews">Skip</a> to All Reviews</h3>
+          <% } %>
+
+
+
+
+    </sections>
+    <%- include('../partials/footer') %>
