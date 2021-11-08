@@ -2,36 +2,53 @@ import { Reviews } from  '../models/review.js'
 
 function index(req, res) {
     Reviews.find({})
-        .then(review => {
+        .then(reviews => {
             res.render('reviews/index', {
-                review,
+                reviews
             })
         })
         .catch(err => {
             console.log(err)
-            res.redirect(`/profile/${req.user.profile._id}`)
+            res.redirect(`/`)
         })
 }
 
 function create(req, res) {
-req.body.ownerOfreviews = req.user.profile.id
     Reviews.create(req.body)
         .then(review => {
-            res.redirect('/show')
+            res.redirect('/reviews')
         })
         .catch(err => {
             console.log(err)
-            res.redirect('/show')
+            res.redirect('/reviews/new')
         })
 }
 
 function show(req, res) {
     Reviews.findById(req.params._id)
-        .populate("ownerOfReview")
+        .populate("owner")
         .then(review => {
             res.render('reviews/show', {
-                review,review
-            
+                review, review
+            })
+        })
+        .catch(err => {
+            console.log(err)
+            res.redirect('/reviews')
+        })
+}
+
+function newReview(req,res){
+    res.render('reviews/new',{})
+}
+
+
+function edit(req, res) {
+    Reviews.findById(req.params.id)
+        .then(reviews => {
+            res.render('reviews/edit', {
+                reviews,
+                
             })
         })
         .catch(err => {
@@ -41,10 +58,11 @@ function show(req, res) {
 }
 
 
-
-
 export{
     index,
     create,
-    show
+    show,
+    newReview as new,
+    edit,
+    
 }
