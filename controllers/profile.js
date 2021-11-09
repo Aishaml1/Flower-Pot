@@ -1,5 +1,5 @@
 import { Profile } from '../models/profile.js'
-import { Tea } from '../models/tea.js'
+
 
 function index(req, res) {
     Profile.find({})

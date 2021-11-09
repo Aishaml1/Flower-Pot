@@ -1,26 +1,33 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<section>
 <% if (user) { %>
 <a href = '/reviews/new' > Add a review </a>
-<h1> All Reviews</h1>
+<h1> All Reviews </h1>
 <% reviews.forEach(function(r){%>
 <hr>
  <ul>
+    
+<li> <%= r.owner.name %></li>
+<li> <%= r.owner.avatar %></li>
 <li>What Tea Have You Tried? 
 <%= r.selectTea %> </li>
  <li>Do you like it? 
      <%= r.like %> </li>
  <li>Other Reviews or Reccomendations: 
-    <%= r.other %> </li>
-<a href="/reviews/<%= r._id %>">Update Review</a> 
-   
-</ul>
+  <li>  <%= r.other %> </li>
+  <li><%= r.createdAt %></li>
+  
 
+<a href="/reviews/<%= r._id %>">Update Review</a> 
 <%})%>
 
-<%}%>
 
+</section>
+
+
+<%}%>
 
 
 <%- include('../partials/footer') %>

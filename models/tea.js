@@ -3,10 +3,8 @@ const Schema = mongoose.Schema
 
 
 const teaSchema = new Schema({
-    chamomile:'Boolean',
-    white:'Boolean',
-    greenTea:'Boolean',
-    Peppermint: 'Boolean',
+    teaName: {type: String, 
+        enum: ['Chamomile', 'White', 'Green Tea', 'Peppermint', 'None']},
     
 },{
     timestamps: true
