@@ -1,4 +1,4 @@
-import { Reviews } from  '../models/review.js'
+import { Reviews } from '../models/review.js'
 
 function index(req, res) {
     Reviews.find({})
@@ -25,25 +25,12 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    Reviews.findById(req.params.id, function(error, review) {
-      res.render('reviews/show', {
-        review: review,
-        error: error
-      })
-    })
-  }
-
-function newReview(req,res){
-    res.render('reviews/new',{})
-}
-
-
-function edit(req, res) {
     Reviews.findById(req.params.id)
-        .then(reviews => {
-            res.render('reviews/edit', {
-                reviews,
-                
+        .populate("owner")
+        .then(review => {
+            res.render('reviews/show', {
+                review,
+
             })
         })
         .catch(err => {
@@ -52,12 +39,37 @@ function edit(req, res) {
         })
 }
 
+function newReview(req, res) {
+    res.render('reviews/new', {})
+}
 
-export{
+function edit(req, res) {
+    Reviews.findById(req.params.id)
+        .then(review => {
+            res.render('reviews/edit', {
+                review,
+
+            })
+        })
+        .catch(err => {
+            console.log(err)
+            res.redirect('/reviews')
+        })
+}
+
+function deleteReview(req, res) {
+    Reviews.findByIdAndDelete(req.params.id, function (err, review) {
+        res.redirect("/reviews")
+        review
+    })
+}
+
+
+export {
     index,
     create,
     show,
     newReview as new,
     edit,
-    
+    deleteReview as delete
 }

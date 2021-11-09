@@ -3,11 +3,10 @@ const Schema = mongoose.Schema
 
 
 const teaSchema = new Schema({
+    usersList: { type: Schema.Types.ObjectId, 'ref': "Profile" },
     teaName: { 
-    type: String,
-    enum: ['Chamomile','White tea','Green Tea','Peppermint'],
-    usersList: { type: Schema.Types.ObjectId, 'ref': "Profile" }
-    }
+    type: Boolean,
+    enum: ['Chamomile','White tea','Green Tea','Peppermint']},
     
 },{
     timestamps: true

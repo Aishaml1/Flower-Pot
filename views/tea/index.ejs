@@ -6,25 +6,20 @@
 
             <h2>Add Tea!</h2>
 
-            <ul>
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title">Chamomile</h5>
+                <img src="images/tea/Chamomile.JPG" class="card-img-top" alt="Chamomile">
+                <div class="card-body">
+                  <details class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.</details>
+                  <button type=submit class="btn btn-primary">Add </button>
+                </div>
+              </div>
 
-            <li> Chamomile <img src='/images/tea/Chamomile.JPG' height="150px" width="150px">
-            </li>
-
-            </ul>
-            <form action="/tea<%= tea._id%>/view details method=GET">
-            <% if (user) { %>
-            <button name="Chamomile" >view details</button> 
-            </form>
-            <% } %>
-
-
-                <form action="/profile" method=GET>
-                    <ul>
-                        <button>Add</button>
-                        <li> White <img id='teaImg' src='/images/tea/White .JPG'>
-                        </li>
-                    </ul>
-                </form>
+           
+                    
+                        
+                    
+               
 
                 <%- include('../partials/footer') %>

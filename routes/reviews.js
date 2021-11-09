@@ -8,15 +8,13 @@ const router = Router()
 router.get('/', isLoggedIn, reviewCtrl.index)
 //localhost:3000/reviews/new
 router.get('/new', isLoggedIn,reviewCtrl.new )
-
+//localhost:3000/reviews/id
 router.get('/:id',isLoggedIn,reviewCtrl.show)
+//localhost:3000/reviews/edit
+router.get('/:id/edit', isLoggedIn, reviewCtrl.edit)
 
 
-//!localhost:3000/reviews/edit
-router.put('/edit', isLoggedIn, reviewCtrl.edit)
-
-
-
+router.delete('/:id', isLoggedIn, reviewCtrl.delete)
 
 // localhost:3000/reviews
 router.post('/', isLoggedIn, reviewCtrl.create)

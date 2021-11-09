@@ -5,10 +5,10 @@ li {
     list-style-type: none;
 }
 
-#teaImg{
+Img{
     display: block;
-    max-height: 150px;
-    max-width: 200px;
-    width: 120px;
-    height: 120px;
+    max-height: 300px;
+    max-width: 300px;
+    width: 300px;
+    height: 300px;
 }

@@ -1,13 +1,21 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-<h1> ꧁ Your Review ꧂ </h1>
+<h1> ꧁ Review ꧂ </h1>
 
-<%=review.selectTea %>
+You have tried
+<b><%=review.selectTea%></b> and You said <b><%=review.like %> </b> to the tea ☕ .
+</br> other: <%=review.other %> 
 
 
-<button> edit </button>
-<button> delete </button>
-<button> save </button>
+
+<form action="/reviews/<%= review._id%>/edit" method="GET">
+    <button class="btn" type="submit">Edit Tea Review</button>
+  </form>
+
+
+  <form action="/reviews/<%= review._id %>?_method=DELETE"" method="POST">
+      <button class="btn" type="submit">Delete Tea review </button>
+    </form>
 
 
   <%- include('../partials/footer') %>

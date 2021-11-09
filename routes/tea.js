@@ -7,7 +7,7 @@ const router = Router()
 
 // localhost:3000/tea
 router.get('/', teaCtrl.index)
-router.get('/:id', teaCtrl.show)
+
 
 
 
