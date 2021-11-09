@@ -1,0 +1,12 @@
+#dateCreated{
+color:blue;
+font-size: 12px;
+}
+#ownerName{
+    color:springgreen;
+}
+#avImg{
+border:snow, solid;
+border-radius:50px;
+width: 65px;
+}

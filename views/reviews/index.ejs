@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/reviews.css">
 <%- include('../partials/nav') %>
 
 <section>
@@ -8,19 +9,18 @@
 <% reviews.forEach(function(r){%>
 <hr>
  <ul>
-    
-<li> <%= r.owner.name %></li>
-<li> <%= r.owner.avatar %></li>
+<li><img id="avImg" src="<%=r.owner.avatar %>"></li>
+<li id="ownerName"><%= r.owner.name %></li>
 <li>What Tea Have You Tried? 
 <%= r.selectTea %> </li>
  <li>Do you like it? 
      <%= r.like %> </li>
  <li>Other Reviews or Reccomendations: 
-  <li>  <%= r.other %> </li>
-  <li><%= r.createdAt %></li>
-  
-
-<a href="/reviews/<%= r._id %>">Update Review</a> 
+<li>  <%= r.other %> </li>
+<li id='dateCreated'><%= r.createdAt %> </li>
+<% if (r.owner.equals(user?.profile._id)) { %>
+<li><a href="/reviews/<%= r._id %>">Update Review</a></li>
+<%}%>
 <%})%>
 
 
