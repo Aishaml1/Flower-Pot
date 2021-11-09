@@ -1,33 +1,20 @@
 <%- include('../partials/html-head') %>
-    <link rel="stylesheet" href="/stylesheets/tea.css">
-    <%- include('../partials/nav') %>
+<%- include('../partials/nav') %>
 
-        <section>
+<main>
+  <h1><%= user ? user.profile.name : error %></h1>
+  <% if (user?.profile.avatar) { %>
+    <div>
+      <img 
+      src="<%= user.profile.avatar %>" 
+        alt="<%= user.profile.name %> avatar"
+      >
+    </div>
+  <% } %>
+  
+  <main>
+    <h1>Tea List</h1>
 
-            <h2>Add Tea!</h2>
-            <form action="/tea/new" method='GET'>
-            <button type=submit name:'teaName'class="btn btn-primary">Add </button>
-          
-            <div class="card" style="width: 18rem;">
-                <h5 class="card-title">Chamomile</h5>
-                <img src="images/tea/Chamomile.JPG" class="card-img-top" alt="Chamomile">
-                <div class="card-body">
-                    
-                  <details class="card-text">
-                    <summary>Health Benfits</summary>
-                    Something small enough to escape casual notice.
-                 </details>
-                 <input type='checkbox' name:'Chamomile'> Try This Tea </input>
-                </div>
-              </div>
-            </form>
-             
 
-           
-                    
-                
-                
-                    
-               
+<%- include('../partials/footer') %>
 
-                <%- include('../partials/footer') %>

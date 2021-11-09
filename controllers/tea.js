@@ -15,12 +15,25 @@ function index(req, res) {
 }
 
 function newTea(req,res){
+    console.log(req.body.newTea)
 res.render('tea/new', {})
 }
 
+function create(req, res) {
+    console.log(req.body.create)
+     Tea.create(req.body)
+        .then(tea => {
+            res.redirect('/tea')
+        })
+        .catch(err => {
+            console.log(err)
+            res.redirect('/tea/new')
+        })
+}
     
 
 export{
     index,
-    newTea as new
+    newTea as new,
+    create
 }

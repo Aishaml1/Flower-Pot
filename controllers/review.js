@@ -4,7 +4,8 @@ function index(req, res) {
     Reviews.find({})
         .then(reviews => {
             res.render('reviews/index', {
-                reviews
+                reviews,
+                time: req.time
             })
         })
         .catch(err => {
@@ -26,7 +27,6 @@ function create(req, res) {
 
 function show(req, res) {
     Reviews.findById(req.params.id)
-        .populate("owner")
         .then(review => {
             res.render('reviews/show', {
                 review,

@@ -1,6 +1,29 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+    <link rel="stylesheet" href="/stylesheets/tea.css">
+    <%- include('../partials/nav') %>
 
+        <section>
 
+            <h2>Add Tea!</h2>
+            <form action="/tea" method='POST'>
+           <button type='submit'>ADD</button>
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title">Chamomile</h5>
+                <img src="/images/tea/Chamomile.JPG" class="card-img-top" alt="Chamomile">
+                <div class="card-body">
+                    
+                  <details class="card-text">
+                    <summary>Health Benfits</summary>
+                    Something small enough to escape casual notice.
+                 </details>
+                 <input type='checkbox' value ='Chamomile'> Try This Tea </input>
+                </div>
+              </div>
+            </form>
+                    
+                
+                
+                    
+               
 
-<%- include('../partials/footer') %>
+                <%- include('../partials/footer') %>

@@ -18,6 +18,7 @@ router.delete('/:id', isLoggedIn, reviewCtrl.delete)
 
 // localhost:3000/reviews
 router.post('/', isLoggedIn, reviewCtrl.create)
+
 export {
   router
 }
