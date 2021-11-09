@@ -3,10 +3,10 @@ const Schema = mongoose.Schema
 
 
 const teaSchema = new Schema({
-    usersList: { type: Schema.Types.ObjectId, 'ref': "Profile" },
-    teaName: { 
-    type: Boolean,
-    enum: ['Chamomile','White tea','Green Tea','Peppermint']},
+    chamomile:'Boolean',
+    white:'Boolean',
+    greenTea:'Boolean',
+    Peppermint: 'Boolean',
     
 },{
     timestamps: true

@@ -1,7 +1,7 @@
-import { Profile } from '../models/profile.js'
+import { Tea } from '../models/tea.js'
 
 function index(req, res) {
-    Profile.find({})
+    Tea.find({})
         .then(tea => {
             res.render('tea/index', {
                 tea,
@@ -14,21 +14,13 @@ function index(req, res) {
         })
 }
 
-function show(req, res){
-    Profile.findById(req.params.id)
-    .populate('teaName')
-    then(tea => {
-        res.render('tea/show', {
-            tea
-
-        })
-    })
+function newTea(req,res){
+res.render('tea/new', {})
 }
 
-
-
+    
 
 export{
     index,
-    show
+    newTea as new
 }
