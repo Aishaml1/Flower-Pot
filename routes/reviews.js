@@ -13,6 +13,7 @@ router.get('/:id',isLoggedIn,reviewCtrl.show)
 //localhost:3000/reviews/edit
 router.get('/:id/edit', isLoggedIn, reviewCtrl.edit)
 
+router.put('/:id/edit', isLoggedIn, reviewCtrl.update)
 
 router.delete('/:id', isLoggedIn, reviewCtrl.delete)
 
