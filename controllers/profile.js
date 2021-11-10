@@ -20,7 +20,7 @@ function show(req, res) {
       .then(self => {
         const isSelf = self._id.equals(profile._id)
         res.render("profile/show", {
-          title: `🐱 ${profile.name}'s profile`,
+          title: `${profile.name}'s profile`,
           profile,
           self,
           isSelf,
@@ -33,7 +33,25 @@ function show(req, res) {
     })
   }
 
+
+  function createTea(req, res) {
+    Profile.findById(req.user.profile._id)
+    .then(profile => {
+      profile.tea.push(req.body)
+      profile.save()
+      .then(() => {
+        res.redirect(`/profile/${req.user.profile._id}`)
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect(`/profile/${req.user.profile._id}`)
+    })
+  }
+  
+
 export{
     index,
-    show
+    show,
+    createTea
 }

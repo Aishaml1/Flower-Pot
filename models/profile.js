@@ -1,10 +1,9 @@
 import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
-
 const teaSchema = new Schema({
-  teaName: {type: String, 
-      enum: ['Chamomile', 'White', 'Green Tea', 'Peppermint', 'None']},
+  tea: {type: String, 
+      enum: ['Chamomile', 'White', 'Green Tea', 'Peppermint']},
   
 },{
   timestamps: true
@@ -13,7 +12,7 @@ const teaSchema = new Schema({
 const profileSchema = new mongoose.Schema({
   name: String,
   avatar: String,
-  teaList:[teaSchema]
+  tea:[teaSchema]
 }, {
   timestamps: true
 })

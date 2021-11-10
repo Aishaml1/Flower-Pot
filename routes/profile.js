@@ -9,7 +9,7 @@ const router = Router()
 router.get('/', isLoggedIn, profileCtrl.index)
 
 router.get('/:id', isLoggedIn, profileCtrl.show)
-
+router.post('/:id/tea', isLoggedIn, profileCtrl.createTea)
 
 export {
     router

@@ -12,10 +12,10 @@
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
   <% if (isSelf)  {%> 
     <h2> List of Teas You Want to Try !</h2>
-    <form action="/profile/<%= profile._id%>" method="POST"></form>
-        <div class="teaName">
-          <label for="teaName">Add A Tea To Your List</label>
-             <select id="tea" name="teaName">
+    <form action="/profile/<%= profile._id%>/tea" method="POST"></form>
+        <div class="tea">
+          <label for="tea">Add A Tea To Your List</label>
+             <select id="tea" name="tea">
             <option value="Chamomile">Chamomile</option>
             <option value="White">White</option>
             <option value="Peppermint">Peppermint</option>
@@ -24,5 +24,23 @@
         </div>
                <button type='submit'>ADD</button>
         </form>
+
+        <% if (profile.tea.length)  {%>
+            <h2>
+              <%= isSelf ? "You have" : `${profile.name} has` %> tea! Here they are!
+            </h2>
+            <% profile.tea.forEach(t => { %>
+              <h3>
+                <%= t.tea %> 
+              </h3>
+            <% }) %>
+          <% } else { %>
+            <h2>
+              <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have a tea List.
+            </h2> 
+          <% } %> 
+        </main>
+
+
         <% } %>
   <%- include('../partials/footer') %>
