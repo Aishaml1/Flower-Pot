@@ -48,10 +48,25 @@ function show(req, res) {
     res.redirect(`/profile/${req.user.profile._id}`)
     })
   }
-  
+
+  function deleteTea(req, res) {
+    Profile.findById(req.user.profile._id)
+    .then(profile => {
+      profile.tea.remove({_id:req.params.id})
+      profile.save()
+      .then(()=> {
+        res.redirect(`/profile/${req.user.profile._id}`)
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect(`/profile/${req.user.profile._id}`)
+    })
+  }
 
 export{
     index,
     show,
-    createTea
+    createTea,
+    deleteTea
 }

@@ -10,6 +10,7 @@ router.get('/', isLoggedIn, profileCtrl.index)
 router.get('/:id', isLoggedIn, profileCtrl.show)
 
 router.post('/:id/tea', isLoggedIn, profileCtrl.createTea)
+router.delete('/tea/:id', isLoggedIn, profileCtrl.deleteTea)
 
 export {
     router
