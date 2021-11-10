@@ -1,7 +1,7 @@
 import { Tea } from '../models/tea.js'
 
 function index(req, res) {
-    Tea.find({}).populate("ownerList")
+    Tea.find({})
         .then(tea => {
             res.render('tea/index', {
                 tea,
@@ -22,12 +22,11 @@ function newTea(req,res){
     })
     .catch(err => {
         console.log(err)
-        res.redirect('/tea')
+        res.redirect('/new')
     })
 }
 
 function create(req, res) {
-req.body.ownerList = req.user.profile._id
     Tea.create(req.body)
         .then(tea => {
             console.log(tea, 'TEA')
@@ -35,7 +34,7 @@ req.body.ownerList = req.user.profile._id
         })
         .catch(err => {
             console.log(err)
-            res.redirect('/tea')
+            res.redirect('/new')
         })
 }
 
