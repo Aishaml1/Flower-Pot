@@ -1,29 +1,41 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+    <link rel="stylesheet" href="/stylesheets/tea.css">
+    <%- include('../partials/nav') %>
 
-<main>
-  
-    </div>
-  <main>
-    <h1>Tea List</h1>
-    <h1><%= user ? user.profile.name : error %></h1>
+        <section>
+         
+            <h2>Tea!</h2>
+            <% if (user) { %>
+            <form action="/tea" method='POST'>
+                <div class="teaName">
+                      <label for="teaName">Add A Tea To Your List</label>
+                         <select id="tea" name="teaName">
+                        <option value="Chamomile">Chamomile</option>
+                        <option value="White">White</option>
+                        <option value="Peppermint">Peppermint</option>
+                        <option value="Green Tea">Green Tea</option>
+                      </select>
+                    </div>
+                <button type='submit'>ADD</button>
+                    </form>
+                    <%}%> 
+                    
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title">Chamomile</h5>
+                <img src="/images/tea/Chamomile.JPG" class="card-img-top" alt="Chamomile">
+                <div class="card-body">
+                    
+                  <details class="card-text">
+                    <summary>Health Benfits</summary>
+                    Something small enough to escape casual notice.
+                 </details>
+                </div>
+              </div>
+            </form>
+                    
+                
+                
+                   
+               
 
-    <div>
-      <img 
-      src="<%= user.profile.avatar %>" 
-        alt="<%= user.profile.name %> avatar"
-      >
-    <% tea.forEach(function(t){%>
-       <ul>
-      <li>
-        <%= t.teaName%> 
-      </li>
-      <form action="/tea/<%=t._id%>?_method=DELETE" method="PUT">
-        <button class="btn" type="submit">X</button>
-      </form>
-      <%})%>
-
-      </section>
-
-<%- include('../partials/footer') %>
-
+                <%- include('../partials/footer') %>

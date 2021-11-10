@@ -12,7 +12,7 @@ router.get('/new', teaCtrl.new)
 // router.post('/', isLoggedIn, teaCtrl.create)
 router.post('/', teaCtrl.create)
 
-router.delete('/:id', isLoggedIn ,teaCtrl.delete)
+router.delete('/', isLoggedIn ,teaCtrl.delete)
 
 export {
   router
