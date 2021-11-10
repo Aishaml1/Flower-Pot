@@ -30,10 +30,16 @@ function create(req, res) {
             res.redirect('/tea/new')
         })
 }
-    
+function deleteTea(req, res) {
+    Tea.findByIdAndDelete(req.params.id, function (err, tea) {
+        res.redirect("/tea")
+        tea
+    })
+}
 
 export{
     index,
     newTea as new,
-    create
+    create,
+    deleteTea as delete
 }

@@ -11,10 +11,18 @@
       >
     </div>
   <% } %>
-  
   <main>
     <h1>Tea List</h1>
-
+    <% tea.forEach(function(t){%>
+       <ul>
+      <%= t.teaName%> </li>
+      <form action="/tea/<%=t.teaName %>?_method=DELETE" method="PUT">
+        <button class="btn" type="submit">Delete</button>
+      </form>
+      <%})%>
+      
+      
+      </section>
 
 <%- include('../partials/footer') %>
 

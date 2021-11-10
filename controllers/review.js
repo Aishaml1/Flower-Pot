@@ -16,7 +16,6 @@ function index(req, res) {
 }
 
 function create(req, res) {
-    console.log('SHOW ROUTE HIT')
     req.body.owner = req.user.profile._id
     Reviews.create(req.body)
         .then(review => {
@@ -29,7 +28,6 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    console.log('SHOW ROUTE HIT')
     Reviews.findById(req.params.id)
     .populate("owner")
         .then(review => {
@@ -46,7 +44,6 @@ function show(req, res) {
 }
 
 function newReview(req, res) {
-    console.log('NEW REVIEW ROUTE HIT')
     Reviews.findById(req.params.id)
         .then(review => {
             res.render('reviews/new', {
@@ -59,10 +56,8 @@ function newReview(req, res) {
 }
 
 function edit(req, res) {
-    console.log('EDIT ROUTE HIT')
     Reviews.findById(req.params.id)
         .then(review => {
-            console.log(review, 'EDIT')
             res.render('reviews/edit', {
                 review,
 
