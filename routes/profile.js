@@ -8,6 +8,7 @@ const router = Router()
 
 router.get('/', isLoggedIn, profileCtrl.index)
 
+router.get('/:id', isLoggedIn, profileCtrl.show)
 
 
 export {

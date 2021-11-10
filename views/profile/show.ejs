@@ -1,0 +1,28 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<% if (profile.avatar) { %>
+<div>
+<img class="profile-avatar"
+    src="<%= profile.avatar %>" 
+   alt="<%= profile.name %> avatar"
+      >
+    </div>
+  <% } %>
+  <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
+  <% if (isSelf)  {%> 
+    <h2> List of Teas You Want to Try !</h2>
+    <form action="/profile/<%= profile._id%>" method="POST"></form>
+        <div class="teaName">
+          <label for="teaName">Add A Tea To Your List</label>
+             <select id="tea" name="teaName">
+            <option value="Chamomile">Chamomile</option>
+            <option value="White">White</option>
+            <option value="Peppermint">Peppermint</option>
+            <option value="Green Tea">Green Tea</option>
+          </select>
+        </div>
+               <button type='submit'>ADD</button>
+        </form>
+        <% } %>
+  <%- include('../partials/footer') %>
