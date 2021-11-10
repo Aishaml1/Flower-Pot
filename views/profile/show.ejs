@@ -12,16 +12,14 @@
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
   <% if (isSelf)  {%> 
     <h2> List of Teas You Want to Try !</h2>
-    <form action="/profile/<%= profile._id%>/tea" method="POST"></form>
-        <div class="tea">
+    <form action="/profile/<%= profile._id%>/tea" method="POST">
           <label for="tea">Add A Tea To Your List</label>
              <select id="tea" name="tea">
             <option value="Chamomile">Chamomile</option>
             <option value="White">White</option>
             <option value="Peppermint">Peppermint</option>
-            <option value="Green Tea">Green Tea</option>
+            <option value="Green">Green Tea</option>
           </select>
-        </div>
                <button type='submit'>ADD</button>
         </form>
 

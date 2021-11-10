@@ -44,8 +44,8 @@ function show(req, res) {
       })
     })
     .catch(err => {
-      console.log(err)
-      res.redirect(`/profile/${req.user.profile._id}`)
+    console.log(err)
+    res.redirect(`/profile/${req.user.profile._id}`)
     })
   }
   
