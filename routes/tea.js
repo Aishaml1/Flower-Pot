@@ -1,13 +1,10 @@
 import { Router } from 'express'
-import * as teaCtrl from '../controllers/tea.js'
-import { isLoggedIn } from '../middleware/middleware.js'
-
 
 const router = Router()
 
-// localhost:3000/tea
-router.get('/', teaCtrl.index)
-
+router.get('/', function (req, res) {
+  res.render('tea', { title: 'Home Page', user: req.user ? req.user : null })
+})
 
 export {
   router
