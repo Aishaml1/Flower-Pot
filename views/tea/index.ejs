@@ -2,26 +2,27 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= user ? user.profile.name : error %></h1>
-  <% if (user?.profile.avatar) { %>
+  
+    </div>
+  <main>
+    <h1>Tea List</h1>
+    <h1><%= user ? user.profile.name : error %></h1>
+
     <div>
       <img 
       src="<%= user.profile.avatar %>" 
         alt="<%= user.profile.name %> avatar"
       >
-    </div>
-  <% } %>
-  <main>
-    <h1>Tea List</h1>
     <% tea.forEach(function(t){%>
        <ul>
-      <%= t.teaName%> </li>
-      <form action="/tea/<%=t.teaName %>?_method=DELETE" method="PUT">
-        <button class="btn" type="submit">Delete</button>
+      <li>
+        <%= t.teaName%> 
+      </li>
+      <form action="/tea/<%=t._id%>?_method=DELETE" method="PUT">
+        <button class="btn" type="submit">X</button>
       </form>
       <%})%>
-      
-      
+
       </section>
 
 <%- include('../partials/footer') %>

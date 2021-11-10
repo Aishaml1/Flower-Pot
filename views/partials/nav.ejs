@@ -6,8 +6,10 @@
 <nav>
   <a href="/">Home</a>
   <a href="/tea/new">Tea</a>
+  <% if (user) { %>
   <a href="/tea">Tea List</a>
   <a href="/reviews">Reviews</a>
+  <% } %> 
   
 
   <% if (user) { %>

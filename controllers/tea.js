@@ -1,11 +1,10 @@
 import { Tea } from '../models/tea.js'
 
 function index(req, res) {
-    Tea.find({})
+    Tea.find({}).populate("ownerList")
         .then(tea => {
             res.render('tea/index', {
                 tea,
-                title: "Tea"
             })
         })
         .catch(err => {
@@ -20,8 +19,8 @@ res.render('tea/new', {})
 }
 
 function create(req, res) {
-    console.log(req.body.create)
-     Tea.create(req.body)
+req.body.ownerList = req.user.profile._id
+    Tea.create(req.body)
         .then(tea => {
             res.redirect('/tea')
         })
@@ -30,12 +29,13 @@ function create(req, res) {
             res.redirect('/tea/new')
         })
 }
+
 function deleteTea(req, res) {
-    Tea.findByIdAndDelete(req.params.id, function (err, tea) {
-        res.redirect("/tea")
-        tea
+    Tea.findByIdAndDelete(req.params.id, function(err, tea) {
+      res.redirect("/tea")
+      console.log(tea)
     })
-}
+  }
 
 export{
     index,
