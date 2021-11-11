@@ -3,8 +3,8 @@ const Schema = mongoose.Schema
 
 const reviewsSchema = new Schema({
     selectTea: {type: String, enum: ['Chamomile', 'White', 'Green', 'Peppermint', 'None']},
-    like: String,
-    other: String,
+    rate: {type: Number, min:0, max:4},
+    share: String,
     owner: { type: Schema.Types.ObjectId, 'ref': "Profile" }
 }, {
     timestamps: true

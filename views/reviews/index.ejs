@@ -13,9 +13,9 @@
 <li id="ownerName"><%= r.owner.name %></li>
 <li>What Tea Have You Tried? 
 <%= r.selectTea %> </li>
- <li>Do you like it? 
-     <%= r.like %> </li>
- <li>Other Reviews or Reccomendations: 
+ <li>Rate:
+     <%= r.rate %></li>
+ <li>Other: 
 <li>  <%= r.other %> </li>
 <li id='dateCreated'><%= r.createdAt %> </li>
 <% if (r.owner.equals(user?.profile._id)) { %>

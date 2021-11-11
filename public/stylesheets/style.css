@@ -20,13 +20,27 @@ body {
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
 }
-
 nav {
-  background-color: white;
+  background-color: rgba(24, 20, 20, 0.082);
   font-size: 1.6rem;
+  justify-content: space-evenly;
+  display:flex;
+}
+
+
+ nav > a {
+  margin: 1rem 3rem;
+  text-decoration: none;
+  font-size: 2.4rem;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
+
+a {
+  color: #17da21;
+} 
+
 
 main {
   display: flex;
@@ -63,22 +77,13 @@ section {
   padding: 50px;
 }
 
-a {
-  color: #00B7FF;
-}
+
 
 pre {
   font-size: 1.4rem;
 }
 
-nav > a {
-  margin: 1rem 3rem;
-  text-decoration: none;
-  font-size: 2.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .btn {
   margin: 1.6rem 0;
@@ -93,3 +98,5 @@ nav > a {
 .profile-avatar {
   margin-top: 50px;
 }
+
+ 

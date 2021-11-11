@@ -4,19 +4,18 @@
 </head>
 <body>
 <nav>
-  <a href="/">Home</a>
-  <a href="/tea">Tea</a>
+  <a href="/"><img <img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-home-multimedia-kiranshastry-gradient-kiranshastry.png"/></a>
+  <a href="/tea"><img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-tea-food-kiranshastry-gradient-kiranshastry.png"/></a>
+
   <% if (user) { %>
 
-    <a href="/profile">Tea'Mates</a>
+    <a href="/profile"><img src="https://img.icons8.com/external-photo3ideastudio-gradient-photo3ideastudio/64/000000/external-tea-pot-chinese-new-year-photo3ideastudio-gradient-photo3ideastudio.png"/></a>
 
-
-  <a href="/reviews">Reviews</a>
+  <a href="/reviews"><img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-chat-business-and-management-kiranshastry-gradient-kiranshastry.png"/></a>
   <% } %> 
   
-
   <% if (user) { %>
-    <a href="/auth/logout">Logout</a>
+    <a href="/auth/logout"><img src="https://img.icons8.com/external-sbts2018-flat-sbts2018/58/000000/external-logout-social-media-basic-1-sbts2018-flat-sbts2018.png"/></a>
     <p> Welcome <%=user.profile.name%> </p>
   <% } else { %>
     <a href="/auth/google" class="siwg-link">
@@ -28,4 +27,3 @@
 
   <% } %>
 </nav>
-

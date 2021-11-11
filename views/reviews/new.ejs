@@ -18,17 +18,15 @@
               </select>
             </div>
 
-            <div class="preference">
-              <label for="like">Do you like it?</label>
-              <select id="tea" name="like">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-                <option value="N/A">N/A</option>
-              </select>
+               <div class="preference">
+              <label for="like">Rate:</label>
+            <input name="rate" type=number min=0 max=4 ></input>
             </div>
+
             <div class="other">
-              <label for='other'>Tea reviews or Reccomendations:
-                <input name='other'>
+              <label for='other'>
+            Share your experience on the tea you've tried or other tea reccomendations
+                <input  type='text' name='other'>
               </label>
             </div>
             <button type="submit">Add Review</button>
