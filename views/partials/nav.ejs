@@ -4,18 +4,18 @@
 </head>
 <body>
 <nav>
-  <a href="/"><img <img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-home-multimedia-kiranshastry-gradient-kiranshastry.png"/></a>
-  <a href="/tea"><img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-tea-food-kiranshastry-gradient-kiranshastry.png"/></a>
+  <a href="/"><img src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-home-literary-genres-becris-lineal-becris.png"/></a>
+  <a href="/tea"><img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-tea-food-kiranshastry-lineal-kiranshastry.png"/></a>
 
   <% if (user) { %>
 
-    <a href="/profile"><img src="https://img.icons8.com/external-photo3ideastudio-gradient-photo3ideastudio/64/000000/external-tea-pot-chinese-new-year-photo3ideastudio-gradient-photo3ideastudio.png"/></a>
+    <a href="/profile"><img src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-hot-tea-autumn-season-justicon-lineal-justicon-1.png"/></a>
 
-  <a href="/reviews"><img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-chat-business-and-management-kiranshastry-gradient-kiranshastry.png"/></a>
+  <a href="/reviews"><img src="https://img.icons8.com/external-ddara-lineal-ddara/64/000000/external-reviewers-digital-marketing-ddara-lineal-ddara.png"/></a>
   <% } %> 
   
   <% if (user) { %>
-    <a href="/auth/logout"><img src="https://img.icons8.com/external-sbts2018-flat-sbts2018/58/000000/external-logout-social-media-basic-1-sbts2018-flat-sbts2018.png"/></a>
+    <a href="/auth/logout"><img src="https://img.icons8.com/external-wanicon-lineal-wanicon/64/000000/external-exit-hotel-wanicon-lineal-wanicon.png"/></a>
     <p> Welcome <%=user.profile.name%> </p>
   <% } else { %>
     <a href="/auth/google" class="siwg-link">
@@ -27,3 +27,4 @@
 
   <% } %>
 </nav>
+<hr>
