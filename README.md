@@ -23,9 +23,15 @@ Aisha Lugg
 * AAU, I should be able to view a studies page with studies from pubmed.
 * AAU, I should be able to add other a tea of my own  to my profile with a description.
 * AAU, I should be able to update my list of teas
-
+  
 # ERD
 ![](https://i.imgur.com/XQgDjQ8.png)
+#Wireframe
+ ![]( https://i.imgur.com/PX5J8xX.png) 
+# ScreenShots
+ ![]( https://i.imgur.com/6IdBzIR.png)
+ ![]( https://i.imgur.com/DWFdDGT.png)
+ ![]( https://i.imgur.com/63G9Leq.png)
 
 # technologies used
 * icons8
