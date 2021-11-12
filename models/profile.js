@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const teaSchema = new Schema({
   tea: {type: String, 
-      enum: ['Chamomile', 'White', 'Green', 'Peppermint']},
+      enum: ['Chamomile','Rose','Lavender','Hibiscus','Butterfly Pea', 'White', 'Green', 'Peppermint',]},
   
 },{
   timestamps: true

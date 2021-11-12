@@ -1,0 +1,45 @@
+section {
+  display: flex;
+
+}
+h1{
+  font-size: 40px;
+  margin-left: 10rem;
+}
+.container {
+    position: relative;
+    width: 50%;
+    
+  }
+  
+ .image {
+    width: 50%;
+    height: 50%;
+  
+  }
+  
+  .overlay {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    transition: .5s ease;
+    opacity: 0;
+    background-color: #000000b4;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
