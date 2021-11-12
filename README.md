@@ -9,13 +9,22 @@ Many of the teas on this app are floral tea.Leave a review about a tea you have
 #  Author
 Aisha Lugg
 
-
-# Resources used
-* healthline.com
-* pixel.com
+# AAU Story
+* AAU or guest should be able to view a homepage (introductory page), a view a variety of teas
+* AAU or guest should be able to view each tea and its description
+* AAU, I should be able to go to a review page to add and post a review
+* AAU, I should be able to see all reviews on teas.
+* AAU, I should be able to view my review about a tea, delete my review and update my review.
+* AAU, I should be able add a tea to my tea list
+* AAU, I should have the option to delete a tea from my profile.
   
-# ERD
+# Ice Box
+* AAU, I should be able to go from light to dark mode
+* AAU, I should be able to view a studies page with studies from pubmed.
+* AAU, I should be able to add other a tea of my own  to my profile with a description.
+* AAU, I should be able to update my list of teas
 
+# ERD
 ![alt text](/images/tea/update.png)
 
 # technologies used
@@ -29,5 +38,11 @@ Aisha Lugg
 * Express
 * Node.js
 
-# Future Implementations
-* 
+# Resources used
+* healthline.com
+* pixel.com
+  
+  # Future Implementations
+* mobile feature
+* api
+ 
