@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="/stylesheets/profile.css">
 <%- include('../partials/nav') %>
 
-<section>
-    <h1> ꧁ Edit Review ꧂ </h1>
-    <   <form action="/reviews/<%=review._id %>/edit?_method=PUT" method="POST">
+<section   style='margin-left:40rem;' >
+    <h1 style='font-size:30px;' > ꧁ Edit Review ꧂ </h1>
+      <form action="/reviews/<%=review._id %>/edit?_method=PUT" method="POST">
         <div>
               <div class="selectTea">
                 <label for="selectTea">What tea Have You Tried?</label>
@@ -32,7 +32,7 @@
                 </label>
               </div>
             </form>
-      <button type="submit"> Update Review</button>
+      <button style='font-size:20px;' type="submit"> Update Review</button>
     </form>
     
   

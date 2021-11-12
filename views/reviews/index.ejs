@@ -4,21 +4,22 @@
 
 <section>
 
-<a href = '/reviews/new' > Add a review </a>
+<a id='addReview' href = '/reviews/new' > Add a review </a>
 <h1> All Reviews </h1>
 <% reviews.forEach(function(r){%>
 <hr>
  <ul>
-<li><img id="avImg" src="<%=r.owner.avatar %>"></li>
+<li><img id="avImg" style='border-radius: 50%;' src="<%=r.owner.avatar %>"></li>
 <li id="ownerName"><%= r.owner.name %></li>
 <li>What Tea Have You Tried? 
-<%= r.selectTea %> </li>
+    <b><%= r.selectTea %></b> </li>
  <li>Rate:
-     <%= r.rate %></li>
+     <b><%= r.rate %></b></li>
  <li>Other: 
-<li>  <%= r.other %> </li>
-<li id='dateCreated'><%= r.createdAt %> </li>
-<% if (r.owner.equals(user?.profile._id)) { %>
+<li> </b> <%= r.other %></b> </li>
+<b><li  style='font-size:15px;'id='dateCreated'><%= r.createdAt %> </li></b>
+
+<% if (r.owner.equals(user?.profile._id)) { %> 
 <li><a href="/reviews/<%= r._id %>">Update Review</a></li>
 <%}%>
 <%})%>

@@ -3,16 +3,17 @@
 <%- include('../partials/nav') %>
 
 <% if (profile.avatar) { %>
-<div>
+<div style='margin-left:40rem;'>
 <img class="profile-avatar"
-    src="<%= profile.avatar %>" 
+style='border-radius:50%' height='180px;'src="<%= profile.avatar %>" 
    alt="<%= profile.name %> avatar"
       >
     </div>
   <% } %>
-  <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
+  <h1 style='margin-left:40rem;'>It's <%= isSelf ? "you" : profile.name %>!</h1>
   <% if (isSelf)  {%> 
-    <h2> List of Teas You Want to Try !</h2>
+    <section style='margin-left:40rem;'>
+    <h2> List of Teas You Want to Try ! </h2>
     <form action="/profile/<%= profile._id%>/tea" method="POST">
           <label for="tea">Add A Tea To Your List</label>
              <select id="tea" name="tea">
@@ -22,7 +23,7 @@
             <option value="Green">Green Tea</option>
             <option value="Green">Green </option>
             <option value="">Rose</option>
-          <option value="Butterfly Pea">Butterfly Pea'</option>
+          <option value="Butterfly Pea">Butterfly Pea</option>
           <option value="Lavender">Lavender</option>
           <option value="Hibiscus">Hibiscus</option>
           </select>
@@ -33,12 +34,13 @@
             <h2>
               <%= isSelf ? "You have" : `${profile.name} has` %> tea! Here they are!
             </h2>
+            
             <% profile.tea.forEach(t => { %>
               <h3>
                 <%= t.tea %> 
               </h3>
-        <form action="/profile/tea/<%= t._id %>?_method=DELETE" method="POST" >
-                <button type="submit">X</button>
+        <form action="/profile/tea/<%= t._id %>?_method=DELETE" method="POST">
+                <button type="submit"><img style='height:2rem;' src="https://img.icons8.com/ios-filled/50/000000/trash.png"/></button>
                   </form>
             <% }) %>
           <% } else { %>
@@ -46,7 +48,8 @@
               <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have a tea List.
             </h2> 
           <% } %> 
-        </main>
+        
+        </section>
 
 
         <% } %>

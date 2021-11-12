@@ -1,24 +1,23 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/profile.css">
 <%- include('../partials/nav') %>
-<h1> ꧁  Your Review ꧂ </h1>
 
+<h1 style='margin-left:40rem; font-size: 45px;'> ꧁  Your Review ꧂ </h1>
+
+<p style='margin-left:40rem; font-size: 30px;'>
 You selected
 <b><%=review.selectTea%></b> 
 and gave a rate of <b><%=review.rate %> </b> .
 </br> other: <%=review.other %> ☕
-
-
-
-<form action="/reviews/<%= review._id%>/edit" method="GET">
-    <button class="btn" type="submit">Edit Tea Review</button>
+</p>
+<div style='margin-left:40rem;'>
+<form action="/reviews/<%= review._id%>/edit" method="GET" >
+    <button class="btn" type="submit" style='font-size:20px;'>Edit<img src="https://img.icons8.com/ios/50/000000/edit--v1.png"/></button>
   </form>
-
-
   <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
-      <button class="btn" type="submit">Delete Tea review </button>
+      <button class="btn" type="submit"><img src="https://img.icons8.com/ios-filled/50/000000/trash.png"/> </button>
     </form>
-
+  </div>
 
   <%- include('../partials/footer') %>
   
