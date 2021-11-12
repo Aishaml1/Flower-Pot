@@ -31,10 +31,10 @@ style='border-radius:50%' height='180px;'src="<%= profile.avatar %>"
         </form>
 
         <% if (profile.tea.length)  {%>
-            <h2>
+            <h1>
               <%= isSelf ? "You have" : `${profile.name} has` %> tea! Here they are!
-            </h2>
-            
+            </h1>
+             
             <% profile.tea.forEach(t => { %>
               <h3>
                 <%= t.tea %> 
@@ -50,7 +50,7 @@ style='border-radius:50%' height='180px;'src="<%= profile.avatar %>"
           <% } %> 
         
         </section>
-
+      
 
         <% } %>
   <%- include('../partials/footer') %>

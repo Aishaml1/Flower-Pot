@@ -1,10 +1,18 @@
-resources used
-- icons8
-- google fonts
-- pixel
+## Flower Pot app
 
-https://www.ncbi.nlm.nih.gov/books/NBK92768/
--freepik
-https://www.freepik.com/search?dates=any&demographic=any-people&format=search&page=1&query=lavender%20tea&sort=popular
+A tea app for everyone who enjoys tea and curious about the benefits. 
+Many of the teas on this app are floral tea.Leave a review about a tea you have
+ tried and add a tea you want to try.  
 
-https://www.healthline.com/nutrition/butterfly-pea-flower-benefits#side-effects
+<a href="https://flower-p0t.herokuapp.com/">Flower Pot app Here</a>
+
+#  Author
+Aisha Lugg
+
+
+
+# resources used
+* icons8
+* google fonts
+* pixel
+* healthline
