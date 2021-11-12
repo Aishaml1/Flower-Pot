@@ -25,7 +25,7 @@ Aisha Lugg
 * AAU, I should be able to update my list of teas
 
 # ERD
-![](https://imgur.com/XQgDjQ8)
+![](https://i.imgur.com/XQgDjQ8.png)
 
 # technologies used
 * icons8
