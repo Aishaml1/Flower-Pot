@@ -26,7 +26,7 @@ Aisha Lugg
   
 # ERD
 ![](https://i.imgur.com/XQgDjQ8.png)
-#Wireframe
+# Wireframe
  ![]( https://i.imgur.com/PX5J8xX.png) 
 # ScreenShots
  ![]( https://i.imgur.com/6IdBzIR.png)
@@ -48,7 +48,7 @@ Aisha Lugg
 * healthline.com
 * pixel.com
   
-  # Future Implementations
+# Future Implementations
 * mobile feature
 * api
  
